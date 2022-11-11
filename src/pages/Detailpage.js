@@ -39,19 +39,21 @@ const Detailpage = () => {
                             <h3>media type: {info.media_type}</h3>
                             <h3>release date: {info.release_date}</h3>
                             <h3>vote count: {info.vote_count}</h3>
-                           <div className="aktery">
-                            {akter.splice(0, 3).map(akters => {
-                                return <div className="acters" key={akters.id}>                                    
-                                    <img className="aktersImg" src={IMG_URL + akters.profile_path} /><h2>{akters.name}</h2>
-                                </div>
-                            })}
+                            <div className="aktery">
+                                {akter.splice(0, 3).map(akters => {
+                                    return (
+                                        <div className="acters" key={akters.id}>
+                                            <img className="aktersImg" src={IMG_URL + akters.profile_path} /><h2>{akters.name}</h2>
+                                        </div>
+                                    )
+                                })}
                             </div>
-                            <button className="buttonMovie"><Link className="wach" to={'/a'}>смотреть</Link></button>
+                            <button className="buttonMovie">movie</button>
                             {videos.splice(0, 1).map(video => {
                                 return (
                                     <div>
                                         <h1 className="budget">{video.name}</h1>
-                                        <iframe className="youtube" 
+                                        <iframe className="youtube"
                                             src={`https://www.youtube.com/embed/${video.key}`}
                                             title="YouTube video player"
                                             frameborder="0"

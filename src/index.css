@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(0deg, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.85)), url("https://images.unsplash.com/photo-1664712470238-de37cf450048?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+  background: linear-gradient(0deg, rgba(15, 13, 18, 0.85), rgba(16, 16, 20, 0.85));
   background-size:cover;
     margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -29,7 +29,6 @@ code {
   padding:0 25px;
   margin: 0 auto;
   display: flex;
-  /* flex-direction: column; */
   gap: 5px;
 }
 .header .container{
@@ -63,25 +62,29 @@ code {
  width:100% ; 
 }
 .card:hover img{
-  color: rgb(255, 255, 255,0.1);
+  transform: scale(1.03);
+  transition: 0.3s;
 }
 
 .card {
-  background-color: rgba(34, 6, 100, 0.192);
+  background-color: rgba(26, 24, 32, 0.505);
   overflow: hidden; 
-  border-radius: 10px;
-  padding: 5px;
+  padding: 3px;
+  text-decoration: none;
 }
 .card:hover{
   cursor: pointer;
+  transform: scale(1.01);
+  transition: 0.3s;
 }
 
 .rate {
   background-color: rgb(116, 183, 94);
-  padding: 5px;
-  border-radius: 4px;
+  padding:0 5px;
+  border-radius: 3px;
   display: inline-block;
   margin-top: 5px;
+  font-size: 13px;
 }
 .rate.red{
   background-color: brown;
@@ -97,8 +100,9 @@ header{
 header a{
   border: 1px solid white;
   border-left: none;
+  border-right: none;
   margin: 15px;
-  border-radius: 0px 5px 5px 0px ;
+  border-radius: 0px;
   padding: 5px 10px;
   margin-top: 20px;
 }
@@ -167,7 +171,10 @@ header a{
 }
 .info{
   color: antiquewhite;
+  margin-top: 8px;
+  text-align: center;
 }
+
 /* about */
 .about{
   display: flex;
@@ -225,15 +232,23 @@ header a{
 @media (max-width:650px) {
   .container{
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 15px;
     font-size: 10px;
-    padding: 20px;
+    padding: 15px;
     margin: 0;
+  }
+  .account{
+    text-decoration: none;
+    color: rgb(137, 137, 139);
+    display: flex;
+    align-items: center;
   }
   .containerNav{
     display: flex;
      flex-direction: inherit;
    }
+   
   header{
     position:inherit;
   }
@@ -243,13 +258,25 @@ header a{
     display: flex;
     justify-content: space-around;
   }
-  input{
+  .container input{
     border: solid 1.5px;
-    border-radius: 20px;
-    font-size: 12px;
+    border-radius: 20px 0 0 20px;
+    padding: 5px;
+    font-size: 14px;
     background-color: transparent;
     color: wheat;
-    width: 100px;
+    border-right: none;
+  }
+  .search{
+    padding: 5.5px;
+    background-color: transparent;
+    border-radius: 0 20px 20px 0;
+    border: solid 1.5px;
+    border-left: none;
+    color: wheat;
+  }
+  .si{
+    display: flex;
   }
   .card-list{
     display: grid;
@@ -308,10 +335,8 @@ header a{
     margin-left: 60px;
   }
 }
+
 .login{
-  
-  background:linear-gradient(rgb(43, 57, 69),rgb(29, 77, 180));
-  background-repeat: no-repeat;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
@@ -321,15 +346,10 @@ header a{
 .login input{
   border-radius: 25px;
   border: none;
+  padding: 5px;
   background-color: rgba(240, 248, 255, 0.297);
 }
-.login button{
-  padding: 10px;
-  border: none;
-  margin-top: 10px;
-  background-color: rgba(245, 245, 245, 0.614);
-  border-radius: 12px;
-}
+
 .wach{
   color: white;
   text-decoration: none;
@@ -340,19 +360,18 @@ header a{
 .text.show {
   display: block;
 }
-.a {
-  color: green;
+
+.account{
+  text-decoration: none;
+  color: rgb(137, 137, 139);
+  display: flex;
+  align-items: center;
 }
-.c {
-  color: red;
+.account:hover{
+  color: rgb(159, 158, 168);
 }
-#email{
-  width: 340px;
-  height: 40px;
-  text-align: center;
-}
-#validation{
-  font-size: 30px;
-  color: beige;
-  font-weight: bold;
-}
+.de{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+ }

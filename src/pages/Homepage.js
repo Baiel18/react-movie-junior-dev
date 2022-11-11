@@ -35,8 +35,9 @@ function Homepage() {
         <>
             <div className="header">
                 <div className="container">
-                    <h1>React Move App Baiel</h1>
-                    <form onSubmit={handleOnSumbit}>
+                    <h1> Movie </h1>
+                    <div className="de">
+                    <form className="si" onSubmit={handleOnSumbit}>
                         <input placeholder="Поиск..." onChange={handleOnChenge} />
                         <button className="search">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -44,7 +45,7 @@ function Homepage() {
                             </svg>
                         </button>
                     </form>
-                    <Link to='/a'>login</Link>
+                    </div>
                 </div>
             </div>
             <div className="container">
